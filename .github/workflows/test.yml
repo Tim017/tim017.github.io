@@ -1,0 +1,36 @@
+name: Schedule Worker
+on:
+  schedule:
+    - cron: '1 0,4,8,12,16,20 * * *'
+  workflow_dispatch:
+jobs:
+  update-yaml:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # 安装必要的工具
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # 安装依赖
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      # 运行脚本提取 Markdown 数据并生成 YAML
+      - name: Extract data and generate YAML
+        run: python script.py
+
+      # 提交更新到仓库
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.yaml
+          git commit -m "Update YAML file"
+          git push
