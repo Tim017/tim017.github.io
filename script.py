@@ -10,7 +10,8 @@ if response.status_code != 200:
 
 # 2 Extract link from MD content
 markdown_content = response.text
-pattern = r'https:\/\/clash\.crossxx\.com\/sub\/vmess\/(\d+)'
+# pattern = r'https:\/\/clash\.crossxx\.com\/sub\/vmess\/(\d+)'
+pattern = r'https:\/\/sub\.crossxx\.com:8443\/sub\/vmess\/(\d+)'
 match = re.search(pattern, markdown_content)
 
 # 3 Save URL to one yaml file
