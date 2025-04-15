@@ -128,7 +128,7 @@ dns:
 proxies:
 - name: Free VMESS Proxy Server00
   port: 80
-  uuid: 010d2216-88de-5ca4-8238-8609ff2e750f
+  uuid: 47807e73-f164-5466-8d2a-c08f3ea48999
   server: 45.77.178.67
   cipher: auto
   alterId: 0
@@ -155,7 +155,7 @@ proxies:
       - deflate
 - name: Free VMESS Proxy Server01
   port: 80
-  uuid: 310429b0-927f-5e6e-9f52-3bfe975006f1
+  uuid: ba044175-a835-57f3-8662-98219be945f5
   server: 45.76.153.172
   cipher: auto
   alterId: 0
@@ -182,7 +182,7 @@ proxies:
       - deflate
 - name: Free VMESS Proxy Server02
   port: 80
-  uuid: 1a783b89-8c5c-5afa-9b4f-5c755b4e8b77
+  uuid: 4b3b90e7-9526-55ad-b959-28e3c3c3afda
   server: 45.77.178.67
   cipher: auto
   alterId: 0
@@ -209,7 +209,7 @@ proxies:
       - deflate
 - name: Free VMESS Proxy Server03
   port: 80
-  uuid: 710501d9-c29e-50af-8016-1ee6c3f55376
+  uuid: b0006090-e285-53ac-b600-fc42565f26ff
   server: 45.76.153.172
   cipher: auto
   alterId: 0
